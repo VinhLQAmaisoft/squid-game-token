@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
-
+const LoginController = require('../../controller/userController')
 /* GET users listing. */
 router.get('/price', async function (req, res, next) {
   // GET CURRENT TOKEN INFOR
@@ -22,4 +22,7 @@ router.get('/price', async function (req, res, next) {
   res.json({ coinData, BNBUSDT, BTCUSDT, ETHUSDT })
 });
 
+router.post('/register', LoginController.register)
+router.post('/login', LoginController.login)
+router.post('/logout', LoginController.logout)
 module.exports = router;

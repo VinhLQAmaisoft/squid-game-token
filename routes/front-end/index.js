@@ -49,10 +49,7 @@ router.get('/buy-token', auth, function (req, res, next) {
 
   res.render('buy-token/buy-token', ejsData(req));
 });
-router.get('/ico-distribution', auth, function (req, res, next) {
 
-  res.render('distribution/ico-distribution', ejsData(req));
-});
 router.get('/transactions', auth, function (req, res, next) {
   res.render('transaction/transactions', ejsData(req));
 });

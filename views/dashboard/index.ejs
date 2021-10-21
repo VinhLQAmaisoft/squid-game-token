@@ -17,15 +17,15 @@
                             <h6 class="card-sub-title">Your Contribution</h6>
                             <ul class="token-balance-list">
                                 <li class="token-balance-sub">
-                                    <span class="lead">2.646</span>
+                                    <span class="lead" id="con-eth">2.646</span>
                                     <span class="sub">ETH</span>
                                 </li>
                                 <li class="token-balance-sub">
-                                    <span class="lead">1.265</span>
+                                    <span class="lead" id="con-btc">1.265</span>
                                     <span class="sub">BTC</span>
                                 </li>
                                 <li class="token-balance-sub">
-                                    <span class="lead">6.506</span>
+                                    <span class="lead" id="con-bnb">6.506</span>
                                     <span class="sub">BNB</span>
                                 </li>
                             </ul>
@@ -51,7 +51,8 @@
                                         <li><span>Token Name:</span>International Squid Games</li>
                                         <li><span>Ticket Symbol:</span>SQUIDGAME</li>
                                     </ul>
-                                    <a href="#" class="btn btn-primary"><em class="fas fa-download mr-3"></em>Download
+                                    <a target="_blank" href="https://squidgame-player.com/Whitepapper.pdf"
+                                        class="btn btn-primary"><em class="fas fa-download mr-3"></em>Download
                                         Whitepaper</a>
                                 </div>
                             </div>
@@ -80,85 +81,8 @@
                                     </th>
                                 </tr><!-- tr -->
                             </thead><!-- thead -->
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="data-state data-state-pending">
-                                            </div>
-                                            <span class="lead">18,750</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span>
-                                            <span class="lead">3.543</span>
-                                            <span class="sub">ETH <em class="fas fa-info-circle" data-toggle="tooltip"
-                                                    data-placement="bottom"
-                                                    data-original-title="1 ETH = 590.54 USD"></em></span>
-                                        </span>
-                                    </td>
-                                    <td class="d-none d-sm-table-cell tnx-date">
-                                        <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                    </td>
-                                    <td class="tnx-type">
-                                        <span
-                                            class="tnx-type-md badge badge-outline badge-success badge-md">Purchase</span>
-                                        <span
-                                            class="tnx-type-sm badge badge-sq badge-outline badge-success badge-md">P</span>
-                                    </td>
-                                </tr><!-- tr -->
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="data-state data-state-progress">
-                                            </div>
-                                            <span class="lead">8,052</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span>
-                                            <span class="lead">0.165</span>
-                                            <span class="sub">BTC <em class="fas fa-info-circle" data-toggle="tooltip"
-                                                    data-placement="bottom"
-                                                    data-original-title="1 BTC = 5450.54 USD"></em></span>
-                                        </span>
-                                    </td>
-                                    <td class="d-none d-sm-table-cell tnx-date">
-                                        <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                    </td>
-                                    <td class="tnx-type">
-                                        <span
-                                            class="tnx-type-md badge badge-outline badge-warning badge-md">Bonus</span>
-                                        <span
-                                            class="tnx-type-sm badge badge-sq badge-outline badge-warning badge-md">B</span>
-                                    </td>
-                                </tr><!-- tr -->
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="data-state data-state-approved">
-                                            </div>
-                                            <span class="lead">19,000</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span>
-                                            <span class="lead">3.141</span>
-                                            <span class="sub">BNB <em class="fas fa-info-circle" data-toggle="tooltip"
-                                                    data-placement="bottom"
-                                                    data-original-title="1 BNB = 180.54 USD"></em></span>
-                                        </span>
-                                    </td>
-                                    <td class="d-none d-sm-table-cell tnx-date">
-                                        <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                    </td>
-                                    <td class="tnx-type">
-                                        <span
-                                            class="tnx-type-md badge badge-outline badge-warning badge-md">Bonus</span>
-                                        <span
-                                            class="tnx-type-sm badge badge-sq badge-outline badge-warning badge-md">B</span>
-                                    </td>
-                                </tr><!-- tr -->
+                            <tbody id="transaction-table">
+
                             </tbody><!-- tbody -->
                         </table><!-- .table -->
                     </div>
@@ -173,8 +97,8 @@
                         </div>
                         <div class="token-calc">
                             <div class="token-pay-amount">
-                                <input id="token-base-amount" onchange="changeAmount()" class="input-bordered input-with-hint" type="number"
-                                    value="1">
+                                <input id="token-base-amount" onchange="changeAmount()"
+                                    class="input-bordered input-with-hint" type="number" value="1">
                                 <div class="token-pay-currency">
                                     <a href="#" class="link ucap link-light toggle-tigger toggle-caret"
                                         id="token-base-type">ETH</a>
@@ -203,20 +127,20 @@
                             <span class="note-text text-light">Amount calculated based current tokens price</span>
                         </div>
                         <div class="token-buy">
-                            <a href="#" class="btn btn-primary">Buy Tokens</a>
+                            <a href="/buy-token" class="btn btn-primary">Buy Tokens</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- .row -->
         <!-- HIDDEN VALUE ETHSQG, BNBSQG, BTCSQG, ETH: ETHUSD -->
-    <div>
-        <input type="hidden" name="" id="ETHSQG" value="<%=ETHSQG%>">
-        <input type="hidden" name="" id="BNBSQG" value="<%=BNBSQG%>">
-        <input type="hidden" name="" id="BTCSQG" value="<%=BTCSQG%>">
-        <input type="hidden" name="" id="ETH" value="<%=ETH%>">
-        <input type="hidden" name="" id="SQG" value="<%=SQG%>">
-    </div>
+        <div>
+            <input type="hidden" name="" id="ETHSQG" value="<%=ETHSQG%>">
+            <input type="hidden" name="" id="BNBSQG" value="<%=BNBSQG%>">
+            <input type="hidden" name="" id="BTCSQG" value="<%=BTCSQG%>">
+            <input type="hidden" name="" id="ETH" value="<%=ETH%>">
+            <input type="hidden" name="" id="SQG" value="<%=SQG%>">
+        </div>
         <div class="row">
             <div class="col-xl-8 col-lg-7">
                 <div class="token-sale-graph card card-full-height">
@@ -278,6 +202,42 @@
 <script>
     var amount = 1;
     var base = 'ETH';
+
+    async function getTransaction() {
+        let username = document.getElementById('username');
+        let response = await $.ajax({
+            method: 'post',
+            url: 'api/user/transaction',
+            data: {
+                username: username.innerText
+            }
+        })
+        let transaction = response.data
+        if (transaction.length == 0) {
+            document.getElementById("transaction-table").innerHTML = `
+                <strong style="color:red;text-align:center">There are no transaction yet!!</strong>
+                `
+        }
+        console.log("Response: ", response);
+    }
+
+    async function getContribution() {
+        let username = document.getElementById('username');
+        console.log("USERNAME: ", username.innerText);
+        let response = await $.ajax({
+            method: 'post',
+            url: 'api/user/contribution',
+            data: {
+                username: username.innerText
+            }
+        })
+        let contribution = response.data;
+        document.getElementById('con-eth').innerHTML = contribution.eth
+        document.getElementById('con-btc').innerHTML = contribution.btc
+        document.getElementById('con-bnb').innerHTML = contribution.bnb
+    }
+
+
     function changeBase(newBase) {
         document.getElementById("token-base-type").innerHTML = newBase
         base = newBase
@@ -311,5 +271,10 @@
         let result = amount * rate
         console.log(`BASE: ${base} || RATE: ${rate} || AMOUNT: ${amount}  = ${result}`);
         document.getElementById("change-result").innerHTML = Number.parseFloat(result).toFixed(2)
+    }
+    window.onload = async () => {
+        console.log("HHHHHHHH");
+        await getTransaction();
+        await getContribution()
     }
 </script>
